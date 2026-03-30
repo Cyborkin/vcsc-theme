@@ -570,25 +570,25 @@
 
 <script src="assets/vcsc-main.js"></script>
 <script>
-  // Sync audio playback to the CSS buttonPress animation (3.5s cycle, press at 60% = 2100ms)
+  // Play audio and show wave on hover over the APPROVED chip
   (function() {
     const audio = document.getElementById('approved-audio');
     const wave  = document.getElementById('audio-wave');
-    const CYCLE = 3500;
-    const PRESS_OFFSET = 2100; // 60% of cycle
+    const chip  = document.querySelector('.vcsc-demo-button__key--approved');
 
-    function playApproved() {
+    chip.addEventListener('mouseenter', () => {
       audio.currentTime = 0;
       audio.play().catch(() => {});
       wave.classList.add('is-playing');
-      audio.onended = () => wave.classList.remove('is-playing');
-    }
+    });
 
-    // Kick off first play at the press offset, then repeat every cycle
-    setTimeout(function tick() {
-      playApproved();
-      setTimeout(tick, CYCLE);
-    }, PRESS_OFFSET);
+    chip.addEventListener('mouseleave', () => {
+      audio.pause();
+      audio.currentTime = 0;
+      wave.classList.remove('is-playing');
+    });
+
+    audio.onended = () => wave.classList.remove('is-playing');
   })();
 
   // Waitlist demo handler (replaces Shopify form in preview)

@@ -388,7 +388,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   color: var(--blue-light);
   box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 0 0 rgba(77,154,255,0);
   animation: buttonPress 3.5s ease-in-out infinite;
-  cursor: default;
+  cursor: pointer;
   user-select: none;
 }
 @keyframes buttonPress {
