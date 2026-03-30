@@ -576,16 +576,10 @@
     const wave  = document.getElementById('audio-wave');
     const chip  = document.querySelector('.vcsc-demo-button__key--approved');
 
-    chip.addEventListener('mouseenter', () => {
+    chip.addEventListener('click', () => {
       audio.currentTime = 0;
       audio.play().catch(() => {});
       wave.classList.add('is-playing');
-    });
-
-    chip.addEventListener('mouseleave', () => {
-      audio.pause();
-      audio.currentTime = 0;
-      wave.classList.remove('is-playing');
     });
 
     audio.onended = () => wave.classList.remove('is-playing');
