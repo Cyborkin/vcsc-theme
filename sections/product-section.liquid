@@ -1,0 +1,123 @@
+<section class="vcsc-product" id="product">
+  <div class="vcsc-container">
+    <div class="vcsc-product__grid">
+
+      <div class="vcsc-product__images">
+        <div class="vcsc-product__img-main">
+          <img
+            src="{{ 'hero.png' | asset_url }}"
+            alt="The Approve Button — assembled with blue glow"
+            class="vcsc-product__photo"
+            width="560" height="448"
+            loading="lazy"
+          >
+        </div>
+        <div class="vcsc-product__img-secondary">
+          <img
+            src="{{ 'exploded-view.png' | asset_url }}"
+            alt="The Approve Button — exploded component diagram"
+            class="vcsc-product__photo vcsc-product__photo--diagram"
+            width="560" height="448"
+            loading="lazy"
+          >
+          <div class="vcsc-product__diagram-label">BOM / Exploded View — Enterprise Edition</div>
+        </div>
+      </div>
+
+      <div class="vcsc-product__details">
+        <div class="vcsc-product__meta-top">
+          <span class="vcsc-product__category">Physical Product™</span>
+          <div class="vcsc-product__stars" aria-label="5 out of 5 stars">
+            ★★★★★
+            <span class="vcsc-product__review-count">(312 enterprise clients)</span>
+          </div>
+        </div>
+
+        <h2 class="vcsc-product__name">The Approve Button™</h2>
+
+        <div class="vcsc-product__pricing">
+          <span class="vcsc-product__price">$24.99</span>
+          <span class="vcsc-product__price-note">Shipping calculated at checkout. Like all consequences.</span>
+        </div>
+
+        <p class="vcsc-product__description">Three buttons. One philosophy. Zero accountability.</p>
+        <p class="vcsc-product__description vcsc-product__description--sub">
+          The Approve Button is a precision-engineered desk artifact purpose-built for the modern developer
+          who needs to move fast, ship often, and read documentation never. Each unit ships with full moral
+          plausibility deniability and a COB sound chip that confirms your choices audibly, in case you
+          weren't already committed to them.
+        </p>
+
+        <div class="vcsc-specs">
+          <div class="vcsc-specs__header">
+            <div class="vcsc-specs__title-lockup">
+              <span class="vcsc-specs__badge">ENTERPRISE</span>
+              <h3 class="vcsc-specs__title">Technical Specifications</h3>
+            </div>
+          </div>
+          <ul class="vcsc-specs__list">
+            <li class="vcsc-specs__item">
+              <span class="vcsc-specs__icon">◈</span>
+              <span><strong>One-click AI approval</strong> — no reading required <em>(or recommended)</em></span>
+            </li>
+            <li class="vcsc-specs__item">
+              <span class="vcsc-specs__icon">◈</span>
+              <span><strong>Ergonomically optimized</strong> for 3AM deployment sessions and the unique grip of someone who has made a mistake but hasn't realized it yet</span>
+            </li>
+            <li class="vcsc-specs__item">
+              <span class="vcsc-specs__icon">◈</span>
+              <span><strong>OSHA-certified</strong> for liability offloading to your future self</span>
+            </li>
+            <li class="vcsc-specs__item">
+              <span class="vcsc-specs__icon">◈</span>
+              <span><strong>Pairs seamlessly</strong> with Monster Energy and the five stages of grief</span>
+            </li>
+            <li class="vcsc-specs__item">
+              <span class="vcsc-specs__icon">◈</span>
+              <span><strong>COB Sound Chip included</strong> — audible confirmation that you have made a choice, regardless of whether it was the right one</span>
+            </li>
+            <li class="vcsc-specs__item">
+              <span class="vcsc-specs__icon">◈</span>
+              <span><strong>Compatible with:</strong> all AI agents, your gut, and nothing else</span>
+            </li>
+            <li class="vcsc-specs__item">
+              <span class="vcsc-specs__icon">◈</span>
+              <span><strong>Battery:</strong> 1x LR44 <em>(included, like your false sense of control)</em></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="vcsc-bom">
+          <table class="vcsc-bom__table">
+            <thead>
+              <tr><th>#</th><th>BOM</th><th>Type</th><th>Qty</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Liability Deflection Enclosure</td><td>ABS (obviously)</td><td>1</td></tr>
+              <tr><td>2</td><td>User Volition Override Caps</td><td>PC (Post-Cognition)</td><td>3</td></tr>
+              <tr><td>3</td><td>Regret Absorption Membrane</td><td>Silicone (Medical Grade)</td><td>1</td></tr>
+              <tr><td>4</td><td>Autonomous Ratification Engine</td><td>Mixed Signals</td><td>1</td></tr>
+              <tr><td>5</td><td>Structural Cope Substrate</td><td>ABS (Also Blame Shift)</td><td>1</td></tr>
+              <tr><td>6</td><td>Cold Fusion Access Hatch</td><td>ABS (Absolutely)</td><td>1</td></tr>
+            </tbody>
+          </table>
+          <p class="vcsc-bom__note">Bill of Materials — Verified by our engineering team at some point</p>
+        </div>
+
+        <a href="#waitlist" class="vcsc-btn vcsc-btn--primary vcsc-btn--full">
+          Pre-Order Now — $24.99
+          <span class="vcsc-btn-arrow">→</span>
+        </a>
+        <p class="vcsc-product__ships-note">Ships when we figure out logistics. Updates sent via email. Not via button.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product Section",
+  "settings": []
+}
+{% endschema %}

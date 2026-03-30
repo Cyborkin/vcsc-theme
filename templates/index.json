@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {}
+    },
+    "product": {
+      "type": "product-section",
+      "settings": {}
+    },
+    "press": {
+      "type": "press-logos",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "fake-reviews",
+      "settings": {}
+    },
+    "founder": {
+      "type": "founder-message",
+      "settings": {}
+    },
+    "warranty": {
+      "type": "warranty",
+      "settings": {}
+    },
+    "waitlist": {
+      "type": "waitlist",
+      "settings": {}
+    }
+  },
+  "order": ["hero", "product", "press", "reviews", "founder", "warranty", "waitlist"]
+}
