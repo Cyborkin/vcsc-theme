@@ -108,7 +108,11 @@
         <div class="vcsc-demo-button__key vcsc-demo-button__key--approved">
           <span>APPROVED</span>
         </div>
+        <div class="vcsc-audio-wave" id="audio-wave">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
       </div>
+      <audio id="approved-audio" src="assets/approved.mp3" preload="auto"></audio>
     </div>
   </div>
 
@@ -566,6 +570,27 @@
 
 <script src="assets/vcsc-main.js"></script>
 <script>
+  // Sync audio playback to the CSS buttonPress animation (3.5s cycle, press at 60% = 2100ms)
+  (function() {
+    const audio = document.getElementById('approved-audio');
+    const wave  = document.getElementById('audio-wave');
+    const CYCLE = 3500;
+    const PRESS_OFFSET = 2100; // 60% of cycle
+
+    function playApproved() {
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+      wave.classList.add('is-playing');
+      audio.onended = () => wave.classList.remove('is-playing');
+    }
+
+    // Kick off first play at the press offset, then repeat every cycle
+    setTimeout(function tick() {
+      playApproved();
+      setTimeout(tick, CYCLE);
+    }, PRESS_OFFSET);
+  })();
+
   // Waitlist demo handler (replaces Shopify form in preview)
   function handleWaitlist(e) {
     e.preventDefault();

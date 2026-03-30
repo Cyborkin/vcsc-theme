@@ -409,6 +409,40 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   }
 }
 
+/* Audio wave visualizer */
+.vcsc-audio-wave {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 10px;
+  height: 28px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.vcsc-audio-wave.is-playing {
+  opacity: 1;
+}
+.vcsc-audio-wave span {
+  display: block;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--blue-light);
+  height: 4px;
+  animation: none;
+}
+.vcsc-audio-wave.is-playing span {
+  animation: waveBar 0.6s ease-in-out infinite alternate;
+}
+.vcsc-audio-wave.is-playing span:nth-child(1) { animation-delay: 0s;    animation-duration: 0.5s; }
+.vcsc-audio-wave.is-playing span:nth-child(2) { animation-delay: 0.1s;  animation-duration: 0.7s; }
+.vcsc-audio-wave.is-playing span:nth-child(3) { animation-delay: 0.05s; animation-duration: 0.4s; }
+.vcsc-audio-wave.is-playing span:nth-child(4) { animation-delay: 0.15s; animation-duration: 0.6s; }
+.vcsc-audio-wave.is-playing span:nth-child(5) { animation-delay: 0.08s; animation-duration: 0.5s; }
+@keyframes waveBar {
+  from { height: 4px; opacity: 0.5; }
+  to   { height: 22px; opacity: 1; }
+}
+
 /* Hero scroll indicator */
 .vcsc-hero__scroll {
   display: flex;
