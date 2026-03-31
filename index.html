@@ -26,7 +26,6 @@
     <nav class="vcsc-header__nav">
       <a href="#product" class="vcsc-nav-link">The Button</a>
       <a href="#warranty" class="vcsc-nav-link">Warranty</a>
-      <a href="#waitlist" class="vcsc-nav-link vcsc-nav-link--cta">Pre-Order</a>
       <div id='product-component-1774934612157'></div>
     </nav>
     <button class="vcsc-header__hamburger" aria-label="Open menu" id="hamburger-btn">
@@ -36,7 +35,6 @@
   <div class="vcsc-mobile-nav" id="mobile-nav">
     <a href="#product">The Button</a>
     <a href="#warranty">Warranty</a>
-    <a href="#waitlist">Pre-Order</a>
   </div>
 </header>
 
@@ -486,51 +484,6 @@
   </div>
 </section>
 
-
-<!-- ══════════════════════════════════════════════════════════
-     WAITLIST
-═══════════════════════════════════════════════════════════ -->
-<section class="vcsc-waitlist" id="waitlist">
-  <div class="vcsc-waitlist__bg-pattern" aria-hidden="true"></div>
-  <div class="vcsc-container vcsc-waitlist__inner">
-
-    <div class="vcsc-waitlist__content">
-      <p class="vcsc-section-eyebrow vcsc-section-eyebrow--light">Pre-Order Access</p>
-      <h2 class="vcsc-waitlist__title">You're Almost<br>Out of Control</h2>
-      <p class="vcsc-waitlist__sub">
-        Be the first to know when we ship. No spam. Just one email.
-        Much like this button, we respect your boundaries exactly once.
-      </p>
-    </div>
-
-    <div class="vcsc-waitlist__form-wrap">
-      <form class="vcsc-waitlist__form" id="waitlist-form" onsubmit="handleWaitlist(event)">
-        <div class="vcsc-waitlist__input-group">
-          <input
-            type="email"
-            id="waitlist-email"
-            class="vcsc-input"
-            placeholder="your@email.com"
-            required
-            autocomplete="email"
-          >
-          <button type="submit" class="vcsc-btn vcsc-btn--primary vcsc-btn--waitlist">
-            Reserve My Surrender Device
-          </button>
-        </div>
-        <div class="vcsc-waitlist__success" id="waitlist-success" style="display:none;" role="alert">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          You're on the list. We'll be in touch before the next production incident.
-        </div>
-        <p class="vcsc-waitlist__legal">
-          By signing up you agree to nothing legally binding. Probably.
-        </p>
-      </form>
-    </div>
-
-  </div>
-</section>
-
 </main>
 
 <!-- ══════════════════════════════════════════════════════════
@@ -625,22 +578,61 @@
           "product": {
             "styles": {
               "product": {
+                "font-family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+                "background": "transparent",
                 "@media (min-width: 601px)": {
-                  "max-width": "calc(25% - 20px)",
-                  "margin-left": "20px",
-                  "margin-bottom": "50px"
+                  "max-width": "100%",
+                  "margin-left": "0px",
+                  "margin-bottom": "0px"
                 }
+              },
+              "title": {
+                "display": "none"
+              },
+              "price": {
+                "display": "none"
+              },
+              "button": {
+                "font-family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+                "font-size": "15px",
+                "font-weight": "600",
+                "letter-spacing": "0em",
+                "padding": "14px 28px",
+                "border-radius": "12px",
+                "background-color": "#3D80FF",
+                "color": "#FFFFFF",
+                "border": "none",
+                "box-shadow": "0 2px 8px rgba(61,128,255,0.35)",
+                "transition": "all 0.18s ease",
+                "cursor": "pointer",
+                "width": "100%",
+                ":hover": {
+                  "background-color": "#2660DD",
+                  "box-shadow": "0 4px 20px rgba(61,128,255,0.45)"
+                },
+                ":focus": {
+                  "background-color": "#2660DD"
+                }
+              },
+              "quantityInput": {
+                "font-size": "14px",
+                "font-family": "Inter, sans-serif",
+                "border-radius": "8px",
+                "border": "1.5px solid #1E2235",
+                "background": "#141720",
+                "color": "#EDF0FA"
               }
             },
             "text": {
-              "button": "Add to cart"
-            }
+              "button": "Pre-Order — $24.99"
+            },
+            "googleFonts": []
           },
           "productSet": {
             "styles": {
               "products": {
                 "@media (min-width: 601px)": {
-                  "margin-left": "-20px"
+                  "margin-left": "0px"
                 }
               }
             }
@@ -654,26 +646,94 @@
             },
             "styles": {
               "product": {
+                "font-family": "Inter, sans-serif",
+                "background": "#0D0F18",
                 "@media (min-width: 601px)": {
                   "max-width": "100%",
                   "margin-left": "0px",
                   "margin-bottom": "0px"
                 }
+              },
+              "button": {
+                "font-family": "Inter, sans-serif",
+                "font-size": "15px",
+                "font-weight": "600",
+                "padding": "14px 28px",
+                "border-radius": "12px",
+                "background-color": "#3D80FF",
+                "color": "#FFFFFF",
+                ":hover": {
+                  "background-color": "#2660DD"
+                },
+                ":focus": {
+                  "background-color": "#2660DD"
+                }
               }
             },
             "text": {
-              "button": "Add to cart"
-            }
+              "button": "Pre-Order — $24.99"
+            },
+            "googleFonts": []
           },
           "option": {},
           "cart": {
+            "styles": {
+              "button": {
+                "font-family": "Inter, sans-serif",
+                "font-size": "15px",
+                "font-weight": "600",
+                "padding": "14px 28px",
+                "border-radius": "12px",
+                "background-color": "#3D80FF",
+                "color": "#FFFFFF",
+                ":hover": {
+                  "background-color": "#2660DD"
+                }
+              },
+              "cart": {
+                "background-color": "#0D0F18"
+              },
+              "header": {
+                "color": "#EDF0FA"
+              },
+              "lineItems": {
+                "color": "#C0C8DC"
+              },
+              "subtotalText": {
+                "color": "#7A84A0"
+              },
+              "subtotal": {
+                "color": "#EDF0FA"
+              },
+              "footer": {
+                "background-color": "#141720"
+              }
+            },
             "text": {
               "total": "Subtotal",
               "button": "Checkout"
-            }
+            },
+            "googleFonts": []
           },
-          "toggle": {}
-        },
+          "toggle": {
+            "styles": {
+              "toggle": {
+                "background-color": "#3D80FF",
+                "border-radius": "12px",
+                ":hover": {
+                  "background-color": "#2660DD"
+                },
+                ":focus": {
+                  "background-color": "#2660DD"
+                }
+              },
+              "count": {
+                "font-family": "Inter, sans-serif",
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        }
       });
     });
   }
